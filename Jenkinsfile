@@ -2,7 +2,11 @@
 pipeline {
   agent { docker { image 'python:3.8.2' } }
   stages {
-   
+   stage('Build1') {
+      steps {
+        cleanWs()
+      }
+    }
     stage('Build1') {
       steps {
         sh 'pip3 install lxml'
