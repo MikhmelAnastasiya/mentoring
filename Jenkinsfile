@@ -2,12 +2,7 @@
 pipeline {
   agent { docker { image 'python:3.8.2' } }
   stages {
-    
-    stage('Build0') {
-      steps {
-        cleanWs()
-      }
-    }
+   
    
     stage('Build1') {
       steps {
@@ -24,6 +19,13 @@ pipeline {
         sh 'python main.py'
       }
     }
+    
+    stage('Build0') {
+      steps {
+        cleanWs()
+      }
+    }
+    
     
   }
 
