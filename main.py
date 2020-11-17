@@ -5,7 +5,7 @@ import os
 
 
 
-dirname = os.path.dirname(__file__)
+dirname = "/var/jenkins_home/workspace/Mariana_task/"
 
 
 INPUT_FOLDER = os.path.join(dirname, 'folders/input_folder')
