@@ -1,13 +1,20 @@
 import FileHandler as fh
 import Parser as p
 import SqlDatabase as sql
+import os
 
 
-INPUT_FOLDER = 'C:/Users/Anastasiya_Mikhmel/Documents/DQE Training/mentor/folders/input_folder'
-PROCESSED_FOLDER = 'C:/Users/Anastasiya_Mikhmel/Documents/DQE Training/mentor/folders/processed_folder'
-INCORRECT_FOLDER = 'C:/Users/Anastasiya_Mikhmel/Documents/DQE Training/mentor/folders/incorrect_input'
-DB_FOLDER = 'C:/Users/Anastasiya_Mikhmel/Documents/DQE Training/mentor/folders/db_folder'
+
+dirname = os.path.dirname(__file__)
+
+
+INPUT_FOLDER = os.path.join(dirname, 'folders/input_folder')
+PROCESSED_FOLDER = os.path.join(dirname, 'folders/processed_folder')
+INCORRECT_FOLDER = os.path.join(dirname, 'folders/incorrect_input')
+DB_FOLDER = os.path.join(dirname, 'folders/db_folder')
 DB_NAME = 'mpdatabase.db'
+
+
 
 def main():
     handler = fh.FileHandler(INPUT_FOLDER, INCORRECT_FOLDER, PROCESSED_FOLDER)
