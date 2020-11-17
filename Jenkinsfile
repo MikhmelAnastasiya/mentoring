@@ -18,6 +18,11 @@ pipeline {
         sh 'python main.py'
       }
     }
+    stage('Build0') {
+      steps {
+        cleanWs()
+      }
+    }
   }
 
 }
